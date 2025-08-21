@@ -1,44 +1,81 @@
 import { useState } from "react";
+import websiteLogo from "../assets/icons/nav-logo.png"; // ✅ Actual logo path
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="w-full bg-white shadow-sm px-7 py-3.5 flex justify-between items-center">
-      {/* Logo */}
-      <img className="w-11 h-11" src="https://placehold.co/43x43" alt="Logo" />
+    <header className="w-full bg-white shadow-sm px-7 py-2 flex items-center relative z-50">
+      {/* Logo (Clickable) - Left */}
+      <a href="/" className="flex items-center z-20">
+        <img
+          className="h-16 w-auto object-contain"
+          src={websiteLogo}
+          alt="Website Logo"
+        />
+      </a>
 
-      {/* Desktop Menu */}
-      <nav className="hidden md:flex gap-12 text-sm font-semibold text-black">
-        <a href="#">Home</a>
-        <a href="#">About Us</a>
-        <a href="#">Contact Us</a>
+      {/* Desktop Menu - Centered */}
+      <nav className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 items-center gap-12">
+        <a
+          href="/"
+          className="text-blue-800 text-xl font-semibold font-montserrat leading-relaxed"
+        >
+          Home
+        </a>
+        <a
+          href="#about"
+          className="text-blue-800 text-xl font-semibold font-montserrat leading-relaxed"
+        >
+          About Us
+        </a>
+        <a
+          href="#contact"
+          className="text-blue-800 text-xl font-semibold font-montserrat leading-relaxed"
+        >
+          Contact Us
+        </a>
       </nav>
 
-      {/* CTA Button */}
-      <button className="hidden md:block px-5 py-2.5 bg-stone-900 text-white rounded-lg text-sm font-semibold">
-        Get Started
-      </button>
-
-      {/* Mobile Menu Button */}
+      {/* Mobile Menu Button - Right */}
       <button
-        className="md:hidden p-2 rounded-lg border"
+        className="md:hidden p-2 rounded-lg border ml-auto z-20"
         onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Toggle menu"
       >
         ☰
       </button>
 
-      {/* Mobile Menu Dropdown */}
-      {menuOpen && (
-        <div className="absolute top-16 left-0 w-full bg-white flex flex-col items-center gap-4 py-4 shadow-md md:hidden">
-          <a href="#" onClick={() => setMenuOpen(false)}>Home</a>
-          <a href="#" onClick={() => setMenuOpen(false)}>About Us</a>
-          <a href="#" onClick={() => setMenuOpen(false)}>Contact Us</a>
-          <button className="px-5 py-2.5 bg-stone-900 text-white rounded-lg text-sm font-semibold">
-            Get Started
-          </button>
-        </div>
-      )}
+      {/* Mobile Menu Dropdown - with animation */}
+      <div
+        className={`absolute top-16 left-0 w-full bg-white flex flex-col items-center gap-6 py-6 shadow-md md:hidden transform transition-all duration-300 ease-in-out ${
+          menuOpen
+            ? "opacity-100 translate-y-0 scale-100"
+            : "opacity-0 -translate-y-5 scale-95 pointer-events-none"
+        }`}
+      >
+        <a
+          href="/"
+          className="text-blue-800 text-xl font-semibold font-montserrat leading-relaxed"
+          onClick={() => setMenuOpen(false)}
+        >
+          Home
+        </a>
+        <a
+          href="#about"
+          className="text-blue-800 text-xl font-semibold font-montserrat leading-relaxed"
+          onClick={() => setMenuOpen(false)}
+        >
+          About Us
+        </a>
+        <a
+          href="#contact"
+          className="text-blue-800 text-xl font-semibold font-montserrat leading-relaxed"
+          onClick={() => setMenuOpen(false)}
+        >
+          Contact Us
+        </a>
+      </div>
     </header>
   );
 }

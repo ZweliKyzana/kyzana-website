@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        montserrat: ["Montserrat", "sans-serif"],
+        sans: ["Montserrat", "sans-serif"], // Montserrat is now default for font-sans
       },
       keyframes: {
         fadeInUp: {
@@ -19,5 +19,3 @@ export default {
   },
   plugins: [],
 };
-
-

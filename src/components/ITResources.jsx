@@ -1,16 +1,17 @@
 import React from "react";
 import ResourceCard from "./cards/ResourceCard";
+import itResourcesIcon from "../assets/icons/it-resources.png"; // ✅ update path if needed
 
 export default function ITResources() {
   const resources = [
-    { icon: "https://placehold.co/65x65", title: "Project Managers" },
-    { icon: "https://placehold.co/65x65", title: "Developers" },
-    { icon: "https://placehold.co/65x65", title: "UI/UX Designers" },
-    { icon: "https://placehold.co/65x65", title: "QA Testers" },
-    { icon: "https://placehold.co/65x65", title: "System Administrators" },
-    { icon: "https://placehold.co/65x65", title: "Cloud Engineers" },
-    { icon: "https://placehold.co/65x65", title: "Network Specialists" },
-    { icon: "https://placehold.co/65x65", title: "IT Support Staff" },
+    { title: "Project Managers" },
+    { title: "Business Analysts" },
+    { title: "UI/UX Designers" },
+    { title: "Support Technicians" },
+    { title: "System Administrators" },
+    { title: "Project Administrators" },
+    { title: "IT Consultants" },
+    { title: "Help Desk Agents" },
   ];
 
   return (
@@ -29,7 +30,11 @@ export default function ITResources() {
       {/* Grid bleeds full width */}
       <div className="mt-12 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 px-4 sm:px-8 lg:px-12">
         {resources.map((res, index) => (
-          <ResourceCard key={index} iconSrc={res.icon} title={res.title} />
+          <ResourceCard
+            key={index}
+            iconSrc={itResourcesIcon}
+            title={res.title}
+          />
         ))}
       </div>
     </section>

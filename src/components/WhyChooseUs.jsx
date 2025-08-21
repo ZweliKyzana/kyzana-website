@@ -1,5 +1,6 @@
 // src/components/WhyChooseUs.jsx
 import React from "react";
+import whyChooseUsImg from "../assets/images/why-choose-us.jpg"; // ✅ update with your actual filename
 
 export default function WhyChooseUs() {
   return (
@@ -9,11 +10,12 @@ export default function WhyChooseUs() {
         {/* Left side */}
         <div className="flex flex-col gap-8">
           {/* Top outline button */}
-          <button className="px-5 py-3 rounded-[76px] outline outline-2 outline-offset-[-2px] outline-black inline-flex justify-center items-center gap-2.5 w-fit">
-            <span className="text-black text-xl font-semibold font-montserrat leading-relaxed">
-              Why Choose Us
-            </span>
-          </button>
+          <button className="px-5 py-3 rounded-[76px] outline outline-2 outline-offset-[-2px] outline-black inline-flex justify-center items-center gap-2.5 w-fit transition-all duration-300 hover:bg-blue-50 hover:scale-105">
+  <span className="text-black text-xl font-semibold font-montserrat leading-relaxed transition-colors duration-300 hover:text-blue-700">
+    Why Choose Us
+  </span>
+</button>
+
 
           {/* Paragraphs */}
           <div className="flex flex-col gap-6 max-w-[750px]">
@@ -41,18 +43,20 @@ export default function WhyChooseUs() {
           </div>
 
           {/* Bottom filled button */}
-          <button className="px-5 py-3 bg-blue-700 rounded-[68px] inline-flex justify-center items-center gap-2.5 hover:bg-blue-800 transition-colors duration-200 w-fit">
-            <span className="text-white text-xl font-semibold font-montserrat leading-normal">
-              Get Started
-            </span>
-          </button>
+          <button className="px-5 py-3 bg-blue-700 rounded-[68px] inline-flex justify-center items-center gap-2.5 transition-all duration-300 hover:bg-blue-800 hover:shadow-lg hover:shadow-blue-500/40 hover:-translate-y-1 w-fit">
+  <span className="text-white text-xl font-semibold font-montserrat leading-normal">
+    Get Started
+  </span>
+</button>
+
+
         </div>
 
         {/* Right side image */}
         <div className="flex justify-center lg:justify-end">
           <img
             className="w-[567px] h-[771px] rounded-xl object-cover"
-            src="https://placehold.co/567x771"
+            src={whyChooseUsImg}
             alt="Why Choose Us"
           />
         </div>
