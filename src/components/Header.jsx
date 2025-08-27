@@ -1,5 +1,6 @@
 import { useState } from "react";
 import websiteLogo from "../assets/icons/nav-logo.png"; // ✅ Actual logo path
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -15,27 +16,28 @@ export default function Header() {
         />
       </a>
 
-      {/* Desktop Menu - Centered */}
-      <nav className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 items-center gap-12">
-        <a
-          href="/"
-          className="text-blue-800 text-xl font-semibold font-montserrat leading-relaxed"
-        >
-          Home
-        </a>
-        <a
-          href="#about"
-          className="text-blue-800 text-xl font-semibold font-montserrat leading-relaxed"
-        >
-          About Us
-        </a>
-        <a
-          href="#contact"
-          className="text-blue-800 text-xl font-semibold font-montserrat leading-relaxed"
-        >
-          Contact Us
-        </a>
-      </nav>
+     {/* Desktop Menu - Centered */}
+<nav className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 items-center gap-12">
+  <Link
+    to="/"
+    className="text-blue-800 text-xl font-semibold font-montserrat leading-relaxed"
+  >
+    Home
+  </Link>
+  <Link
+    to="/about"
+    className="text-blue-800 text-xl font-semibold font-montserrat leading-relaxed"
+  >
+    About Us
+  </Link>
+  <Link
+    to="/contact"
+    className="text-blue-800 text-xl font-semibold font-montserrat leading-relaxed"
+  >
+    Contact Us
+  </Link>
+</nav>
+
 
       {/* Mobile Menu Button - Right */}
       <button
@@ -48,34 +50,35 @@ export default function Header() {
 
       {/* Mobile Menu Dropdown - with animation */}
       <div
-        className={`absolute top-16 left-0 w-full bg-white flex flex-col items-center gap-6 py-6 shadow-md md:hidden transform transition-all duration-300 ease-in-out ${
-          menuOpen
-            ? "opacity-100 translate-y-0 scale-100"
-            : "opacity-0 -translate-y-5 scale-95 pointer-events-none"
-        }`}
-      >
-        <a
-          href="/"
-          className="text-blue-800 text-xl font-semibold font-montserrat leading-relaxed"
-          onClick={() => setMenuOpen(false)}
-        >
-          Home
-        </a>
-        <a
-          href="#about"
-          className="text-blue-800 text-xl font-semibold font-montserrat leading-relaxed"
-          onClick={() => setMenuOpen(false)}
-        >
-          About Us
-        </a>
-        <a
-          href="#contact"
-          className="text-blue-800 text-xl font-semibold font-montserrat leading-relaxed"
-          onClick={() => setMenuOpen(false)}
-        >
-          Contact Us
-        </a>
-      </div>
+  className={`absolute top-16 left-0 w-full bg-white flex flex-col items-center gap-6 py-6 shadow-md md:hidden transform transition-all duration-300 ease-in-out ${
+    menuOpen
+      ? "opacity-100 translate-y-0 scale-100"
+      : "opacity-0 -translate-y-5 scale-95 pointer-events-none"
+  }`}
+>
+  <Link
+    to="/"
+    className="text-blue-800 text-xl font-semibold font-montserrat leading-relaxed"
+    onClick={() => setMenuOpen(false)}
+  >
+    Home
+  </Link>
+  <Link
+    to="/about"
+    className="text-blue-800 text-xl font-semibold font-montserrat leading-relaxed"
+    onClick={() => setMenuOpen(false)}
+  >
+    About Us
+  </Link>
+  <Link
+    to="/contact"
+    className="text-blue-800 text-xl font-semibold font-montserrat leading-relaxed"
+    onClick={() => setMenuOpen(false)}
+  >
+    Contact Us
+  </Link>
+</div>
+
     </header>
   );
 }
