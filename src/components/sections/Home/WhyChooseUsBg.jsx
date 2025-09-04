@@ -1,5 +1,5 @@
 import React from "react";
-import whatWeOfferBg from "../../../assets/images/what-we-offer-bg-copy.jpg"; // ✅ same image as What We Offer
+import whatWeOfferBg from "../../../assets/images/what-we-offer-bg-copy.png"; // ✅ same image as What We Offer
 
 export default function WhyChooseUsBg() {
   return (
@@ -13,7 +13,7 @@ export default function WhyChooseUsBg() {
             Why Choose Us
           </h2>
           <p className="text-white text-xl md:text-2xl font-semibold font-montserrat leading-normal text-center">
-            We’re dedicated to delivering value, reliability, and innovative solutions that put your success first.
+            Your trusted partner in building future-ready businesses
           </p>
         </div>
       </div>

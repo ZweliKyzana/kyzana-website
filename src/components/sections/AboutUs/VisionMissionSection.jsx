@@ -1,5 +1,6 @@
+
 import React from "react";
-import visionMissionImage from "../../../assets/images/vision-mission-section.jpg"; // ✅ actual image
+import visionMissionImage from "../../../assets/images/vision-mission-section2.jpg"; // ✅ actual image
 
 export default function VisionMissionSection() {
   return (
@@ -8,7 +9,7 @@ export default function VisionMissionSection() {
         {/* Left: Image */}
         <div className="flex-shrink-0">
           <img
-            className="w-[675px] h-[385px] object-cover"
+            className="w-[675px] h-[480px] object-cover"
             src={visionMissionImage}
             alt="Vision Mission"
           />

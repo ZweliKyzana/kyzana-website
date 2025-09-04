@@ -28,3 +28,18 @@
 .animate-ripple {
   animation: ripple 0.6s linear;
 }
+
+html {
+  scrollbar-gutter: stable; /* Reserves space for scrollbar; supported in Chrome, Firefox, and Edge */
+}
+
+/* Fallback for browsers without scrollbar-gutter support (e.g., Safari) */
+@supports not (scrollbar-gutter: stable) {
+  html {
+    overflow-y: scroll; /* Forces scrollbar always visible, preventing appearance/disappearance */
+  }
+  body {
+    overflow-y: auto; /* Allows body to scroll normally */
+   
+  }
+}

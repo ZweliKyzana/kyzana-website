@@ -1,49 +1,50 @@
 import React, { useRef, useEffect, useState } from "react";
 
-// ✅ Import all icons from the correct folder
-import iconReselling from "../../assets/icons/icon-reselling.png";
-import iconAppDev from "../../assets/icons/icon-app-dev.png";
-import iconWebEcom from "../../assets/icons/icon-web-ecom.png";
-import iconManagedIT from "../../assets/icons/icon-managed-it.png";
-import iconConsulting from "../../assets/icons/icon-consulting.png"; // reuse for new cards if needed
+// ✅ Import the new six icons
+import servOne from "../../assets/icons/serv-one.png";
+import servTwo from "../../assets/icons/serv-two.png";
+import servThree from "../../assets/icons/serv-three.png";
+import servFour from "../../assets/icons/serv-four.png";
+import servFive from "../../assets/icons/serv-five.png";
+import servSix from "../../assets/icons/serv-six.png";
 
 const servicesData = [
   {
-    title: "Software & Hardware Reselling",
+    title: "Hardware Reselling",
     description:
-      "Yield Plug Technologies offers premium software licensing, hardware procurement, and vendor management solutions, delivering trusted products from leading vendors to meet enterprise needs efficiently.",
-    icon: iconReselling,
-    highlight: true, // blue background
+      "Yield Plug Tech partners with global vendors and provides hardware from reputable brands in the following categories: Laptops, Desktops, Projects, Presentation Screens, External Hard drives, Printers, Network peripherals and accessories. The services includes procurement, delivery and configurations.",
+    icon: servOne,
+    // ✅ removed highlight so it matches the rest
   },
   {
-    title: "App Development & Maintenance",
+    title: "Software Reselling",
     description:
-      "Yield Plug Technologies builds custom web and mobile applications with 24/7 support and ongoing maintenance, ensuring reliable performance and continuous improvement.",
-    icon: iconAppDev,
+      "We partner with local and global software providers to ensure that organisations have access to top-tier software solutions that drive operational efficiency and digital transformation.",
+    icon: servTwo,
   },
   {
     title: "App Development & Support",
     description:
-      "We build mobile applications that prioritise your consumers, whether you're starting from scratch or improving an existing App. From concept to launch, we deliver secure, scalable, and compliant solutions.",
-    icon: iconConsulting,
+      "We build mobile applications that prioritise your consumers, whether you're starting from scratch or making improvements to an already existing App. We collaborate with you to bring your App idea to life from concert, design, development, testing and launching. We built Apps that are secured, scalable and are compliant to POPIA.",
+    icon: servThree,
   },
   {
     title: "Website & Ecommerce Platforms",
     description:
-      "Yield Plug Technologies offers scalable websites and e-commerce solutions with full support, including custom development and performance optimization for seamless user experiences.",
-    icon: iconWebEcom,
+      "We develop chic websites and e-Commerce platforms that give you digital presence, captivate your users and produce quantifiable outcomes.",
+    icon: servFour,
   },
   {
-    title: "Managed IT Services",
+    title: "IT Professional Services",
     description:
-      "Yield Plug Technologies provides skilled IT professionals to augment your team, offering reliable IT helpdesk services, LAN support, and desktop assistance for smooth operations.",
-    icon: iconManagedIT,
+      "We provide skilled Project management and UI/UX Designer resources to augment your Team and ensure successfully delivery of projects.",
+    icon: servFive,
   },
   {
-    title: "Digital Transformation Solutions",
+    title: "Development of Digital Transformation Solutions",
     description:
-      "Automated business processes unlock productivity and drive performance. We develop custom-fit solutions that enable organisations to digitally transform with ease.",
-    icon: iconConsulting,
+      "Automated business processes unlock productivity and drive performance. We have a development team to automate business processes through the development of custom and fit for purpose solutions that enable organisations to digitally transform.",
+    icon: servSix,
   },
 ];
 
@@ -81,11 +82,9 @@ export default function Services() {
             style={{ animationDelay: isVisible ? `${index * 0.15}s` : "0s" }}
             className={`${cardBaseClasses} ${
               service.highlight ? "bg-blue-700 text-white" : "bg-sky-50 text-black"
-            } ${
-              isVisible ? "opacity-100 animate-fadeInUp" : "opacity-0"
-            }`}
+            } ${isVisible ? "opacity-100 animate-fadeInUp" : "opacity-0"}`}
           >
-            <img src={service.icon} alt="" className="w-12 h-12" />
+            <img src={service.icon} alt={service.title} className="w-12 h-12" />
             <h3
               className={`text-lg font-bold leading-snug ${
                 service.highlight ? "text-white" : "text-black"

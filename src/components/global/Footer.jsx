@@ -1,5 +1,5 @@
 import React from "react";
-import newYieldIcon from "../../assets/icons/new-yield-icon.png"; // ✅ replace with new logo
+import newYieldIcon from "../../assets/icons/nav-logo-tt.png"; // ✅ replace with new logo
 
 export default function Footer() {
   return (
@@ -7,32 +7,24 @@ export default function Footer() {
       <div className="max-w-[1440px] mx-auto px-6 sm:px-12">
         {/* Top Section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-12 mb-16">
-          
-{/* Logo + Short Text */}
-<div className="flex flex-col items-start lg:col-span-4 relative -translate-y-24">
-  <img
-    src={newYieldIcon}
-    alt="Yield Plug Icon"
-    className="w-64 h-64 object-contain mb-0"
-  />
+          {/* Logo + Short Text */}
+          <div className="flex flex-col items-start lg:col-span-4 relative -translate-y-24">
+            <img
+              src={newYieldIcon}
+              alt="Yield Plug Icon"
+              className="w-64 h-64 object-contain mb-0"
+            />
 
-  {/* Text below the logo */}
-  <div className="flex flex-col leading-tight mt-[-80px]">
-    <p className="text-black/60 text-lg font-semibold font-montserrat">
-      Your trusted partner for comprehensive IT
-    </p>
-    <p className="text-black/60 text-lg font-semibold font-montserrat">
-      solutions and digital transformation
-    </p>
-  </div>
-</div>
-
-
-
-
-
-
-
+            {/* Text below the logo */}
+            <div className="flex flex-col leading-tight mt-[-80px]">
+              <p className="text-black/60 text-lg font-semibold font-montserrat">
+                Your trusted partner for comprehensive IT
+              </p>
+              <p className="text-black/60 text-lg font-semibold font-montserrat">
+                solutions and digital transformation
+              </p>
+            </div>
+          </div>
 
           {/* Services */}
           <div className="flex flex-col gap-3 lg:col-span-3">
@@ -40,7 +32,7 @@ export default function Footer() {
               Services
             </h3>
             <p className="text-black/60 text-lg font-semibold font-montserrat leading-snug">
-              Software & Hardware Reselling
+              Hardware & Software Reselling
             </p>
             <p className="text-black/60 text-lg font-semibold font-montserrat leading-snug">
               App Development & Support
@@ -87,39 +79,19 @@ export default function Footer() {
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path d="M22.675 0h-21.35C.597 0 0 .597 0 1.325v21.351C0 
+                  <path
+                    d="M22.675 0h-21.35C.597 0 0 .597 0 1.325v21.351C0 
                   23.403.597 24 1.325 24h11.494v-9.294H9.692V11.01h3.127V8.413c0-3.1 
                   1.894-4.788 4.659-4.788 1.325 0 2.464.099 
                   2.796.143v3.24h-1.918c-1.504 0-1.796.715-1.796 
                   1.763v2.309h3.587l-.467 3.696h-3.12V24h6.116C23.403 
                   24 24 23.403 24 22.676V1.325C24 .597 23.403 
-                  0 22.675 0z" />
+                  0 22.675 0z"
+                  />
                 </svg>
               </a>
 
-              {/* Twitter */}
-              <a href="https://twitter.com" target="_blank" rel="noreferrer">
-                <svg
-                  className="w-9 h-9 text-blue-800 hover:text-blue-600 transition-colors"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M23.954 4.569c-.885.392-1.83.656-2.825.775 
-                  1.014-.611 1.794-1.574 2.163-2.723-.951.564-2.005.974-3.127 
-                  1.195-.897-.959-2.178-1.559-3.594-1.559-2.717 
-                  0-4.924 2.207-4.924 4.924 0 .39.045.765.127 
-                  1.124-4.09-.205-7.719-2.165-10.148-5.144-.424.729-.666 
-                  1.577-.666 2.475 0 1.708.869 3.216 2.188 
-                  4.099-.807-.026-1.566-.247-2.229-.616v.061c0 
-                  2.385 1.693 4.374 3.946 4.827-.413.112-.849.171-1.296.171-.317 
-                  0-.626-.03-.928-.086.627 1.956 2.444 3.379 4.6 
-                  3.419-1.68 1.318-3.808 2.105-6.102 
-                  2.105-.396 0-.787-.023-1.175-.069 2.179 
-                  1.397 4.768 2.213 7.557 2.213 9.054 
-                  0 14-7.496 14-13.986 0-.21 0-.423-.015-.634.962-.689 
-                  1.8-1.56 2.46-2.548l-.047-.02z" />
-                </svg>
-              </a>
+             
 
               {/* LinkedIn */}
               <a href="https://linkedin.com" target="_blank" rel="noreferrer">
@@ -128,7 +100,8 @@ export default function Footer() {
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path d="M22.225 0H1.771C.792 0 
+                  <path
+                    d="M22.225 0H1.771C.792 0 
                   0 .774 0 1.729v20.542C0 23.226.792 24 
                   1.771 24h20.451C23.2 24 24 23.226 24 
                   22.271V1.729C24 .774 23.2 0 22.225 
@@ -140,7 +113,8 @@ export default function Footer() {
                   2.071zm15.111 13.019h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 
                   0-2.137 1.445-2.137 2.939v5.667H9.355V9h3.414v1.561h.049c.476-.9 
                   1.637-1.852 3.367-1.852 3.598 0 4.262 2.368 
-                  4.262 5.451v6.292z" />
+                  4.262 5.451v6.292z"
+                  />
                 </svg>
               </a>
             </div>

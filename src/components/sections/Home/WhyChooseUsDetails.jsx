@@ -1,5 +1,5 @@
 import React from "react";
-import whyChooseUsImg from "../../../assets/images/why-choose-us.jpg"; // replace with your actual image
+import whyChooseUsImg from "../../../assets/images/why-choose-us.png"; // replace with your actual image
 
 export default function WhyChooseUsDetails() {
   return (
