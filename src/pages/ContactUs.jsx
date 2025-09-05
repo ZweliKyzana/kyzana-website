@@ -29,6 +29,7 @@ export default function ContactUs() {
     setIsSubmitting(true);
     setSubmitStatus(null);
 
+    // Your EmailJS credentials
     const serviceID = 'service_dib1725';
     const templateID = 'template_m8zvpi3';
     const userID = 'w9I6mR0Buu2TFldsV';
@@ -42,7 +43,7 @@ export default function ContactUs() {
         company: formData.company,
         subject: formData.subject,
         message: formData.message,
-        to_email: 'patiencec@yieldplugtech.com',
+        to_email: 'enquiries@yieldplugtech.com', // Updated to company email
         time: new Date().toLocaleString()
       }, userID);
 
@@ -77,7 +78,7 @@ export default function ContactUs() {
       } else {
         setSubmitStatus({ 
           type: 'error', 
-          message: `Failed to send message. Error: ${error.text || 'Unknown error'}` 
+          message: `Failed to send message. Please email us directly at enquiries@yieldplugtech.com` 
         });
       }
     } finally {
@@ -99,7 +100,7 @@ export default function ContactUs() {
             </div>
 
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-              {/* Names */}
+              {/* Form fields remain the same as before */}
               <div className="relative">
                 <label htmlFor="names" className="text-blue-800 text-xl font-bold font-montserrat leading-relaxed">
                   Names
@@ -116,7 +117,6 @@ export default function ContactUs() {
                 />
               </div>
 
-              {/* Email */}
               <div className="relative">
                 <label htmlFor="email" className="text-blue-800 text-xl font-bold font-montserrat leading-relaxed">
                   Email Address
@@ -133,7 +133,6 @@ export default function ContactUs() {
                 />
               </div>
 
-              {/* Company Name */}
               <div className="relative">
                 <label htmlFor="company" className="text-blue-800 text-xl font-bold font-montserrat leading-relaxed">
                   Company Name
@@ -149,7 +148,6 @@ export default function ContactUs() {
                 />
               </div>
 
-              {/* Subject */}
               <div className="relative">
                 <label htmlFor="subject" className="text-blue-800 text-xl font-bold font-montserrat leading-relaxed">
                   Subject
@@ -166,7 +164,6 @@ export default function ContactUs() {
                 />
               </div>
 
-              {/* Message */}
               <div className="relative">
                 <label htmlFor="message" className="text-blue-800 text-xl font-bold font-montserrat leading-relaxed">
                   Message
@@ -219,7 +216,7 @@ export default function ContactUs() {
             </form>
           </div>
 
-          {/* Right: Contact Info + Map - UPDATED FOR MOBILE */}
+          {/* Right: Contact Info + Map */}
           <div className="flex flex-col gap-6 px-4 md:px-0 ml-[-10px] md:ml-[-25px] lg:ml-0">
             <div className="justify-start text-blue-800 text-2xl font-bold font-montserrat leading-loose">
               Prefer a Direct Approach?

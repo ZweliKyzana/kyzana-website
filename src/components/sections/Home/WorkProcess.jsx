@@ -1,5 +1,5 @@
 import React from "react";
-import workProcessImg from "../../../assets/images/work-process.jpg";
+import workProcessImg from "../../../assets/images/work-processs.jpg";
 
 const steps = [
   {
@@ -30,7 +30,7 @@ export default function WorkProcess() {
       <div className="w-full max-w-[1440px] flex flex-col md:flex-row items-start px-2 md:px-6">
         
         {/* Left Image */}
-        <div className="flex-[1.2] flex justify-start md:pr-8">
+        <div className="flex-[1.2] flex justify-start md:pr-8 mb-8 md:mb-0"> {/* Added mb-8 for mobile gap */}
           <img
             src={workProcessImg}
             alt="Work Process"

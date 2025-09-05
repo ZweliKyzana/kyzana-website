@@ -1,5 +1,5 @@
 import React from "react";
-import aboutUsHero from "../../../assets/images/about-us-hero.jpg";
+import aboutUsHero from "../../../assets/images/about-us-heroo.png";
 
 export default function AboutUsHero() {
   return (

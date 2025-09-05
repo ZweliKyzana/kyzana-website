@@ -50,20 +50,7 @@ export default function VisionMissionSection() {
       </div>
 
       
-{/* Commitment (below image + text row) */}
-<div className="w-full max-w-[1440px] mt-8 px-6">   {/* ⬅ reduced from mt-16 */}
-  <div className="w-full md:max-w-[75%] lg:max-w-[70%]">
-    <h2 className="text-blue-800 text-xl font-bold font-montserrat leading-normal">
-      Our Commitment
-    </h2>
-    <ul className="list-disc pl-6 mt-2 space-y-2 text-gray-900/60 text-xl font-semibold font-montserrat leading-relaxed">
-      <li>We commit to understanding and aligning with your vision and goals.</li>
-      <li>We commit to delivering modern, scalable, and creative solutions.</li>
-      <li>To build lasting partnerships through openness and accountability.</li>
-      <li>Ensuring excellence and dependable outcomes every time.</li>
-    </ul>
-  </div>
-</div>
+
 
     </section>
   );
